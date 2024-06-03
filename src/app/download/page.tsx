@@ -64,14 +64,16 @@ export default async function DownloadPage(AppProps: AppProps) {
     };
 
     return (
-        <React.Suspense fallback={<p>Loading...</p>}>
-            {response.isPrivate ? (
-                <ErrorMessage msg="Sorry, this video is private, please use facebook private video downloader tool!" />
-            ) : null}
+        <div className="container mx-auto">
+            <React.Suspense fallback={<p>Loading...</p>}>
+                {response.isPrivate ? (
+                    <ErrorMessage msg="Sorry, this video is private, please use facebook private video downloader tool!" />
+                ) : null}
 
-            {response.error ? <ErrorMessage msg={response.error} /> : null}
+                {response.error ? <ErrorMessage msg={response.error} /> : null}
 
-            <DownloadLinks />
-        </React.Suspense>
+                <DownloadLinks />
+            </React.Suspense>
+        </div>
     );
 }
