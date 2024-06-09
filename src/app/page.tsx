@@ -17,9 +17,9 @@ const WhyToUseItem = ({ ...props }) => {
 
 const HowToUSeItem = ({ ...props }) => {
     return (
-        <div className="card card-compact lg:w-64 md:w-80 shadow-xl m-3 m-h-60">
+        <div className="card card-compacts w-96 sm:w-64 shadow-xl m-3 m-h-60">
             <figure>
-                <video width="320" height="240" controls preload="none" muted loop playsInline>
+                <video width="auto" height="240" controls preload="none" muted loop playsInline>
                     <source src={props.data.video} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
