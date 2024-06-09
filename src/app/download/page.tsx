@@ -13,7 +13,8 @@ interface AppProps {
 export default function DownloadPage(AppProps: AppProps) {
     const facebookVideoUrl = AppProps.searchParams["facebook-video-url"];
 
-    const regex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.com|fb\.watch|web\.facebook\.com).*$/;
+    const regex =
+        /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.com|fb\.watch|web\.facebook\.com||m\.facebook\.com).*$/;
 
     if (!facebookVideoUrl || facebookVideoUrl === "" || !regex.test(facebookVideoUrl)) {
         return <ShowError message="Invalid facebook video url." />;
