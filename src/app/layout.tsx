@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "./daisyui.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +16,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" data-theme="emerald">
+            <head>
+                <link
+                    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+                    rel="stylesheet"
+                    type="text/css"
+                />
+            </head>
             <body className={inter.className}>{children}</body>
         </html>
     );
