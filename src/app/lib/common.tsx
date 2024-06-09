@@ -78,14 +78,18 @@ export function getVideoSourceURLsFromRaw(htmlRaw: string) {
         browser_native_hd_url =
             decodeSpecialCharacters(htmlRaw.split('"browser_native_hd_url":"')[1].split('"')[0]).replace(/\\/g, "") +
             "&dl=1";
-    } catch (error) {}
+    } catch (error) {
+        browser_native_hd_url = undefined;
+    }
 
     // GET SD QUALITY
     try {
         browser_native_sd_url =
             decodeSpecialCharacters(htmlRaw.split('"browser_native_sd_url":"')[1].split('"')[0]).replace(/\\/g, "") +
             "&dl=1";
-    } catch (e) {}
+    } catch (e) {
+        browser_native_sd_url = undefined;
+    }
 
     return {
         browser_native_hd_url,
@@ -130,7 +134,9 @@ export async function getVideoSourceURLsFromLink(facebookVideoUrl: string) {
                 console.log("Error, can not get minimal content!" + error);
             }
 
-            return res.includes("www.facebook.com/login") && !res.includes("browser_native_sd_url")
+            return res.includes("www.facebook.com/login") ||
+                !res.includes("browser_native_sd_url") ||
+                res.includes('id="login_form"')
                 ? { isPrivate: true }
                 : getVideoSourceURLsFromRaw(minifyContent);
         })
