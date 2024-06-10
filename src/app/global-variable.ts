@@ -1,4 +1,4 @@
-export const appication = {
+export const application = {
     appname: "FastSave",
     apphost: "http://localhost:3000",
     locales: [

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./daisyui.css";
-import { appication } from "@/app/global-variable";
+import { application } from "@/app/global-variable";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,32 +31,32 @@ export default function RootLayout({
                 <meta name="author" content="Admin" />
                 <meta itemProp="name" content={`${metadata.title}`} />
                 <meta property="og:locale" content="en" />
-                <meta itemProp="image" content={`${appication.apphost}/banner.png`} />
+                <meta itemProp="image" content={`${application.apphost}/banner.png`} />
 
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content={`${metadata.title}`} />
                 <meta name="twitter:description" content={`${metadata.description}`} />
-                <meta name="twitter:image:src" content={`${appication.apphost}/banner.png`} />
+                <meta name="twitter:image:src" content={`${application.apphost}/banner.png`} />
 
                 <meta property="og:title" content={`${metadata.title}`} />
                 <meta property="og:description" content={`${metadata.description}`} />
                 <meta property="og:site_name" content={`${metadata.title}`} />
-                <meta property="og:image" content={`${appication.apphost}/banner.png`} />
+                <meta property="og:image" content={`${application.apphost}/banner.png`} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={appication.apphost} />
+                <meta property="og:url" content={application.apphost} />
                 {/*  */}
 
                 <meta name="theme-color" content="#28b76b" />
                 {/* <link rel="manifest" href="manifest.json?v=1.7" /> */}
-                <link rel="apple-touch-icon" sizes="180x180" href={`${appication.apphost}/icon.png`} />
-                <link rel="shortcut icon" href={`${appication.apphost}/icon.png`} />
-                <link href={`${appication.apphost}/icon.png`} rel="icon" />
+                <link rel="apple-touch-icon" sizes="180x180" href={`${application.apphost}/icon.png`} />
+                <link rel="shortcut icon" href={`${application.apphost}/icon.png`} />
+                <link href={`${application.apphost}/icon.png`} rel="icon" />
 
                 {/* <meta name="google" content="notranslate" /> */}
-                <link rel="canonical" href={`${appication.apphost}`} />
-                <link rel="preload" href={`${appication.apphost}/icon.png`} as="image" />
+                <link rel="canonical" href={`${application.apphost}`} />
+                <link rel="preload" href={`${application.apphost}/icon.png`} as="image" />
 
-                <link rel="alternate" hrefLang="x-default" href={`${appication.apphost}`} />
+                <link rel="alternate" hrefLang="x-default" href={`${application.apphost}`} />
 
                 {/* Google Auth */}
                 <meta name="google-adsense-account" content="ca-pub-5383842302083788" />

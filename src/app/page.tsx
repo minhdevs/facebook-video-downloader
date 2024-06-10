@@ -4,7 +4,7 @@ import KeyFeatures from "./ui/components/KeyFeatures";
 import FrequentlyAskedQuestions from "./ui/components/FrequentlyAskedQuestions";
 import Footer from "./ui/Layouts/Footer";
 import Header from "@/app/ui/Layouts/Header";
-import { appication } from "@/app/global-variable";
+import { application } from "@/app/global-variable";
 import Script from "next/script";
 
 const WhyToUseItem = ({ ...props }) => {
@@ -21,7 +21,7 @@ const HowToUSeItem = ({ ...props }) => {
     return (
         <div className="card card-compacts w-96 sm:w-64 shadow-xl m-3 m-h-60">
             <figure>
-                <video width="auto" height="240" controls preload="none" muted loop playsInline>
+                <video width="auto" height="240" controls preload="none" muted loop playsInline autoPlay>
                     <source src={props.data.video} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -48,17 +48,17 @@ const stepsToUse = [
                 , copy the link of a video that you wish to download, then paste the link in <LinkHome smaller />
             </span>
         ),
-        video: "",
+        video: "/videos/step-1.mp4",
     },
     {
         title: "Select output quality",
         content: "select the quality that you want to download.",
-        video: "",
+        video: "/videos/step-2.mp4",
     },
     {
         title: "Download Fb video",
         content: "Wait for our server to process and download your device.",
-        video: "",
+        video: "/videos/step-3.mp4",
     },
 ];
 
@@ -66,18 +66,18 @@ const ldjson = [
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "@id": "${appication.apphost}",
-        url: "${appication.apphost}",
+        "@id": "${application.apphost}",
+        url: "${application.apphost}",
         inLanguage: "en",
         name: "FastSave",
         description:
             "Download Facebook Video to your phone, PC, or tablet with highest quality Full HD, 2K, 4K to mp4. Use our Facebook Downloader with your browser. Support both Android, and iOS.",
         mainEntity: {
             "@type": "WebApplication",
-            "@id": "${appication.apphost}#app",
+            "@id": "${application.apphost}#app",
             name: "FastSave",
             alternateName: ["Download Facebook Video", "fastsave.live"],
-            image: "${appication.apphost}/icon.png",
+            image: "${application.apphost}/icon.png",
             operatingSystem: "Windows, Linux, iOS, Android, OSX, macOS",
             applicationCategory: "UtilitiesApplication",
             featureList: [
@@ -94,8 +94,8 @@ const ldjson = [
         "@type": ["Organization", "LocalBusiness"],
         additionalType: ["https://en.wikipedia.org/wiki/Download"],
         "@id": "kg:/g/11kj4l0kzb",
-        url: `${appication.apphost}`,
-        image: [`${appication.apphost}/icon.png`],
+        url: `${application.apphost}`,
+        image: [`${application.apphost}/icon.png`],
         email: "mailto:hunterwolf.work@gmail.com",
         address: {
             "@type": "PostalAddress",
@@ -119,7 +119,7 @@ const ldjson = [
             "@type": "ReserveAction",
             target: {
                 "@type": "EntryPoint",
-                urlTemplate: `${appication.apphost}`,
+                urlTemplate: `${application.apphost}`,
                 inLanguage: "VI",
                 actionPlatform: [
                     "http://schema.org/DesktopWebPlatform",
@@ -325,8 +325,9 @@ export default function Home() {
                     </div>
 
                     <Link
+                        title="How to download video facebook"
                         target="_blank"
-                        href="/"
+                        href="https://www.youtube.com/watch?v=0jjDvg8Aoho"
                         className="btn btn-success btn-outline btn-wide btn-sm mx-auto my-4 justify-center items-center"
                         style={{ display: "flex" }}
                     >

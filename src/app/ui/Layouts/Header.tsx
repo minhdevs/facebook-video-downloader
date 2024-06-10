@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className="container mx-auto p-0">
             <div className="navbar bg-base-100 mt-2">
-                <div className="flex-1 items-center">
+                <div className="flex-1 items-center ">
                     <LinkHome showIcon={true} />
                     <ul className="menu menu-horizontal px-1">
                         <li>
@@ -14,28 +14,28 @@ export default function Header() {
                                 <summary>More</summary>
                                 <ul className="p-2 bg-base-100 rounded-t-none w-64">
                                     <li className="hover:text-secondary">
-                                        <Link href="/download-facebook-private-video">
+                                        <Link href="#download-facebook-private-video">
                                             Download Facebook Private Video
                                         </Link>
                                     </li>
                                     <li className="hover:text-secondary">
-                                        <Link href="/download-facebook-reels">Download Facebook Reels</Link>
+                                        <Link href="#download-facebook-reels">Download Facebook Reels</Link>
                                     </li>
                                     <li className="hover:text-secondary">
-                                        <Link href="/download-facebook-story">Download Facebook Story</Link>
+                                        <Link href="#download-facebook-story">Download Facebook Story</Link>
                                     </li>
                                     <li className="hover:text-secondary">
-                                        <Link href="/download-facebook-watch">Download Facebook Watch</Link>
+                                        <Link href="#download-facebook-watch">Download Facebook Watch</Link>
                                     </li>
                                     <li className="hover:text-secondary">
-                                        <Link href="/download-facebook-video">Download Facebook Video</Link>
+                                        <Link href="#download-facebook-video">Download Facebook Video</Link>
                                     </li>
                                 </ul>
                             </details>
                         </li>
                     </ul>
                 </div>
-                <div className="flex-none">
+                {/* <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
                         <li>
                             <details>
@@ -51,7 +51,7 @@ export default function Header() {
                             </details>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         </header>
     );
