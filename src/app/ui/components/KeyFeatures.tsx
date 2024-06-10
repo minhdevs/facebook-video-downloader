@@ -50,7 +50,7 @@ export default function KeyFeatures(props: KeyFeaturesProps) {
             <h2 className="text-center text-2xl font-bold">
                 <LinkHome showIcon bigger /> - Best <span className="text-success">Facebook Video Downloader</span>
             </h2>
-            <p className="text-slate-400 text-center mt-4">
+            <p className="text-gray-400 text-center mt-4">
                 Key Features of <LinkHome /> Facebook Downloader
             </p>
             <div className="p-4">
@@ -58,7 +58,7 @@ export default function KeyFeatures(props: KeyFeaturesProps) {
                     return (
                         <div key={i}>
                             <h3 className="text-lg font-bold my-2">{e.title}</h3>
-                            <p className="py-4 px-2 text-sm text-slate-400">{e.content}</p>
+                            <p className="py-4 px-2 text-sm text-gray-400">{e.content}</p>
                         </div>
                     );
                 })}

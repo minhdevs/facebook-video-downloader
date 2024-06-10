@@ -12,7 +12,7 @@ const WhyToUseItem = ({ ...props }) => {
         <div className="card lg:w-80 md:w-96 shadow-lg p-8 m-3 m-h-60">
             <span className="text-success p-3 w-fit rounded rounded-full bg-green-50">{props.icon}</span>
             <h3 className="text-lg font-bold my-2">{props.title}</h3>
-            <p className="text-sm text-slate-400">{props.content}</p>
+            <p className="text-sm text-gray-400">{props.content}</p>
         </div>
     );
 };
@@ -30,7 +30,7 @@ const HowToUSeItem = ({ ...props }) => {
                 <h4 className="text-md font-bold">
                     <span className="text-green-500">Step: {props.step + 1}</span> {props.data.title}
                 </h4>
-                <p className="text-sm text-slate-400">{props.data.content}</p>
+                <p className="text-sm text-gray-400">{props.data.content}</p>
             </div>
         </div>
     );
@@ -220,7 +220,12 @@ export default function Home() {
                                 />
                             </svg>
                         </button> */}
-                        <button id="btn-download" className="join-item btn btn-primary text-base-100" type="submit">
+                        <button
+                            id="btn-download"
+                            className="join-item btn btn-primary"
+                            style={{ color: "#FFF" }}
+                            type="submit"
+                        >
                             Download
                         </button>
                     </form>
@@ -234,12 +239,12 @@ export default function Home() {
                     <div className="mt-3 px-4">
                         <p className="text-center my-1">
                             <LinkHome />{" "}
-                            <span className="text-slate-400">
+                            <span className="text-gray-400">
                                 is the best Facebook Video Downloader to help you high quality Facebook video download:
                                 Full HD, 2K, 4K (mp4).
                             </span>
                         </p>
-                        <p className="text-slate-400 text-center">
+                        <p className="text-gray-400 text-center">
                             Download Facebook Video to your phone, PC, or tablet with highest quality. Use our FB video
                             downloader with your browser. No need to install any software. Support both Android, and
                             IOS.
@@ -314,7 +319,7 @@ export default function Home() {
                     <h2 className="text-center text-2xl font-bold">
                         How to <span className="text-success">Download video Facebook</span>
                     </h2>
-                    <p className="text-slate-400 text-center mt-4">
+                    <p className="text-gray-400 text-center mt-4">
                         Facebook video downloader with best formats 1080p - 2K - 4K for free
                     </p>
 

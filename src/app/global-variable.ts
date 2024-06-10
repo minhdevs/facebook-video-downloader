@@ -1,6 +1,6 @@
 export const application = {
     appname: "FastSave",
-    apphost: "http://localhost:3000",
+    apphost: "https://fastsave.live",
     locales: [
         "en",
         "id",

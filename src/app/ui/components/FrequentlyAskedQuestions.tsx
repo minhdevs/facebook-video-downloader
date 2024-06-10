@@ -58,7 +58,7 @@ export default function FrequentlyAskedQuestions() {
                                 {e.question}
                             </div>
                             <div
-                                className="collapse-content text-sm text-slate-400"
+                                className="collapse-content text-sm text-gray-400"
                                 itemScope
                                 itemProp="acceptedAnswer"
                                 itemType="https://schema.org/Answer"
