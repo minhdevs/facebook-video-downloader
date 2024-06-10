@@ -1,5 +1,5 @@
 import * as React from "react";
-import LinkHome from "./LinkHome";
+import LinkHome from "../components/LinkHome";
 
 export interface IFooterProps {}
 

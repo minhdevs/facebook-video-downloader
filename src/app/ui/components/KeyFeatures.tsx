@@ -28,8 +28,8 @@ const data = [
         title: "Facebook Reels Downloader",
         content: (
             <span>
-                <b>FastSave</b> also could download Fb video story of the best quality. All you need is to befriend the
-                creator of the Story on Fb and follow the same steps as downloading private Facebook videos.
+                <b>FastSave</b> also could download Fb reels of the best quality. Tollow the same steps as download
+                video facebook.
             </span>
         ),
     },
@@ -37,8 +37,8 @@ const data = [
         title: "Facebook Private Video Downloader",
         content: (
             <span>
-                <b>FastSave</b> also could download Fb video story of the best quality. All you need is to befriend the
-                creator of the Story on Fb and follow the same steps as downloading private Facebook videos.
+                <b>FastSave</b> also could download Fb private video. All you need is to befriend the creator of the
+                video on Fb and follow the same steps as download facebook reel.
             </span>
         ),
     },

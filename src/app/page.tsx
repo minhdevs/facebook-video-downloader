@@ -2,8 +2,10 @@ import Link from "next/link";
 import LinkHome from "./ui/components/LinkHome";
 import KeyFeatures from "./ui/components/KeyFeatures";
 import FrequentlyAskedQuestions from "./ui/components/FrequentlyAskedQuestions";
-import Footer from "./ui/components/Footer";
+import Footer from "./ui/Layouts/Footer";
 import Header from "@/app/ui/Layouts/Header";
+import { appication } from "@/app/global-variable";
+import Script from "next/script";
 
 const WhyToUseItem = ({ ...props }) => {
     return (
@@ -60,10 +62,124 @@ const stepsToUse = [
     },
 ];
 
+const ldjson = [
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "@id": "${appication.apphost}",
+        url: "${appication.apphost}",
+        inLanguage: "en",
+        name: "FastSave",
+        description:
+            "Download Facebook Video to your phone, PC, or tablet with highest quality Full HD, 2K, 4K to mp4. Use our Facebook Downloader with your browser. Support both Android, and iOS.",
+        mainEntity: {
+            "@type": "WebApplication",
+            "@id": "${appication.apphost}#app",
+            name: "FastSave",
+            alternateName: ["Download Facebook Video", "fastsave.live"],
+            image: "${appication.apphost}/icon.png",
+            operatingSystem: "Windows, Linux, iOS, Android, OSX, macOS",
+            applicationCategory: "UtilitiesApplication",
+            featureList: [
+                "Facebook Video Download",
+                "Facebook Reels Video Downloader",
+                "Download Video Instagram",
+                "Download Video Tiktok",
+            ],
+            offers: { "@type": "Offer", price: "0" },
+        },
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        additionalType: ["https://en.wikipedia.org/wiki/Download"],
+        "@id": "kg:/g/11kj4l0kzb",
+        url: `${appication.apphost}`,
+        image: [`${appication.apphost}/icon.png`],
+        email: "mailto:hunterwolf.work@gmail.com",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "132 Minh Khai, Cau Dien, Bac Tu Liem, Ha Noi, Viet Nam 03000",
+            addressCountry: "VI",
+            addressRegion: "Vietnam",
+            postalCode: "03000",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+84704151934",
+            contactType: "customer service",
+            contactOption: "HearingImpairedSupported",
+            areaServed: "VI",
+            availableLanguage: "Vietnam",
+        },
+        description:
+            "Download Facebook Video to your phone, PC, or tablet with highest quality Full HD, 2K, 4K to mp4. Use our Facebook Downloader with your browser. Support both Android, and iOS.",
+        name: "Facebook Video Downloader - FastSave",
+        potentialAction: {
+            "@type": "ReserveAction",
+            target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${appication.apphost}`,
+                inLanguage: "VI",
+                actionPlatform: [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/IOSPlatform",
+                    "http://schema.org/AndroidPlatform",
+                ],
+            },
+            result: { "@type": "Reservation", name: "Facebook Video Downloader - FastSave" },
+        },
+        sameAs: [
+            "https://g.co/kgs/BkGCCP",
+            "https://twitter.com/Snapsave_App",
+            "https://www.youtube.com/channel/UCziCx13v7v9sCK0WnSY81Tw",
+            "https://www.linkedin.com/company/fastsavelive ",
+            "https://www.twitch.tv/fastsavelive",
+            "https://www.crunchbase.com/organization/snapsave-e157 ",
+            "https://www.reddit.com/user/fastsavelive",
+            "https://fastsavelive.tumblr.com/",
+            "https://www.instagram.com/fastsave.live",
+            "https://www.tiktok.com/@fastsave.live",
+            "https://github.com/fastsavelive",
+            "https://pinterest.com/savesnap",
+            "https://www.flickr.com/people/snapsave",
+            "https://www.wikidata.org/wiki/Q111285821",
+            "https://open.spotify.com/show/0vhqzERhPFLg0QEbTPlIQ6",
+            "https://about.me/snapsave",
+        ],
+    },
+    {
+        "@context": "https://schema.org",
+        searchKeywords: [
+            "facebook video downloader",
+            "free facebook video downloader",
+            "hd facebook video downloader",
+            "private facebook video downloader",
+            "fast facebook video downloader",
+            "mwarevn",
+        ],
+        "@type": "SoftwareApplication",
+        name: "Facebook Video Downloader",
+        operatingSystem: ["Android", "ios", "MacOS", "Windows", "Linux"],
+        applicationCategory: ["UtilitiesApplication", "BrowserApplication"],
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.6",
+            ratingCount: "28864",
+        },
+        offers: {
+            "@type": "Offer",
+            price: "0.00",
+            priceCurrency: "USD",
+        },
+    },
+];
+
 export default function Home() {
     return (
         <>
             <Header />
+
             <main className="container mx-auto bg-white">
                 <h1 className="text-center text-4xl font-bold mt-28">Facebook Video Downloader</h1>
                 <p className="text-center mt-1">Save Facebook videos Full HD, 2K, 4K - Free</p>
@@ -172,7 +288,7 @@ export default function Home() {
                         />
                         <WhyToUseItem
                             title="Free"
-                            content="SnapSave FB Downloader - It's always be free. We only place some ads to support our development."
+                            content="FastSave FB Downloader - It's always be free. We only place some ads to support our development."
                             icon={
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -226,6 +342,25 @@ export default function Home() {
 
                 <Footer />
             </main>
+
+            <Script
+                id="s0"
+                strategy="afterInteractive"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson[0]) }}
+            />
+            <Script
+                id="s1"
+                strategy="afterInteractive"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson[1]) }}
+            />
+            <Script
+                id="s2"
+                strategy="afterInteractive"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(ldjson[2]) }}
+            />
         </>
     );
 }

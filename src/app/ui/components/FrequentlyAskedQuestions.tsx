@@ -45,11 +45,25 @@ export default function FrequentlyAskedQuestions() {
             <div className="mt-6">
                 {data.map((e, i) => {
                     return (
-                        <div key={i} className="collapse collapse-arrow  shadow-lg my-2">
+                        <div
+                            key={i}
+                            className="collapse collapse-arrow  shadow-lg my-2"
+                            tabIndex={0}
+                            itemScope
+                            itemProp="mainEntity"
+                            itemType="https://schema.org/Question"
+                        >
                             <input type="radio" name="my-accordion-2" />
-                            <div className="collapse-title font-bold text-success">{e.question}</div>
-                            <div className="collapse-content text-sm text-slate-400">
-                                <p>{e.answer}</p>
+                            <div className="collapse-title font-bold text-success" itemProp="name">
+                                {e.question}
+                            </div>
+                            <div
+                                className="collapse-content text-sm text-slate-400"
+                                itemScope
+                                itemProp="acceptedAnswer"
+                                itemType="https://schema.org/Answer"
+                            >
+                                <p itemProp="text">{e.answer}</p>
                             </div>
                         </div>
                     );
@@ -58,3 +72,10 @@ export default function FrequentlyAskedQuestions() {
         </section>
     );
 }
+
+// <details tabindex=0 itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+//     <summary itemprop="name"><%= item.question %></summary>
+//     <article itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+//         <p itemprop="text"><%= item.answer %></p>
+//     </article>
+// </details>
