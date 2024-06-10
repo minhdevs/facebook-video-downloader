@@ -27,9 +27,9 @@ const HowToUSeItem = ({ ...props }) => {
                 </video>
             </figure>
             <div className="card-body">
-                <h4 className="text-md font-bold">
+                <h3 className="text-md font-bold">
                     <span className="text-green-500">Step: {props.step + 1}</span> {props.data.title}
-                </h4>
+                </h3>
                 <p className="text-sm text-gray-400">{props.data.content}</p>
             </div>
         </div>
@@ -42,7 +42,7 @@ const stepsToUse = [
         content: (
             <span>
                 From{" "}
-                <Link className="text-primary" href="https://www.facebook.com">
+                <Link className="text-orange-400" href="https://www.facebook.com">
                     Facebook
                 </Link>
                 , copy the link of a video that you wish to download, then paste the link in <LinkHome smaller />
