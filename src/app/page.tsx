@@ -77,7 +77,7 @@ const ldjson = [
             "@id": "${application.apphost}#app",
             name: "FastSave",
             alternateName: ["Download Facebook Video", "fastsave.live"],
-            image: "${application.apphost}/icon.png",
+            image: "${application.apphost}/images/icon.png",
             operatingSystem: "Windows, Linux, iOS, Android, OSX, macOS",
             applicationCategory: "UtilitiesApplication",
             featureList: [
@@ -95,7 +95,7 @@ const ldjson = [
         additionalType: ["https://en.wikipedia.org/wiki/Download"],
         "@id": "kg:/g/11kj4l0kzb",
         url: `${application.apphost}`,
-        image: [`${application.apphost}/icon.png`],
+        image: [`${application.apphost}/images/icon.png`],
         email: "mailto:hunterwolf.work@gmail.com",
         address: {
             "@type": "PostalAddress",
