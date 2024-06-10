@@ -136,7 +136,7 @@ export async function getVideoSourceURLsFromLink(facebookVideoUrl: string) {
 
             return res.includes("www.facebook.com/login") ||
                 !res.includes("browser_native_sd_url") ||
-                res.includes('id="login_form"')
+                (!res.includes("browser_native_sd_url") && res.includes('id="login_form"'))
                 ? { isPrivate: true }
                 : getVideoSourceURLsFromRaw(minifyContent);
         })
