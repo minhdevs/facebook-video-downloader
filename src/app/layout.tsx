@@ -60,8 +60,14 @@ export default function RootLayout({
 
                 {/* Google Auth */}
                 <meta name="google-adsense-account" content="ca-pub-5383842302083788" />
+                <script
+                    defer
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5383842302083788"
+                    crossOrigin="anonymous"
+                ></script>
             </head>
             <body className={inter.className}>{children}</body>
+            <script async src="/js/script.js"></script>
         </html>
     );
 }
