@@ -8,7 +8,7 @@ export default function Header() {
             <div className="navbar bg-base-100 mt-2">
                 <div className="flex-1 items-center ">
                     <LinkHome showIcon={true} />
-                    <ul className="menu menu-horizontal px-1">
+                    {/* <ul className="menu menu-horizontal px-1">
                         <li>
                             <details>
                                 <summary>More</summary>
@@ -33,7 +33,7 @@ export default function Header() {
                                 </ul>
                             </details>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 {/* <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
