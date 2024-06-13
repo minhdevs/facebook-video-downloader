@@ -6,6 +6,7 @@ import Footer from "./ui/Layouts/Footer";
 import Header from "@/app/ui/Layouts/Header";
 import { application } from "@/app/global-variable";
 import Script from "next/script";
+import BannerH50 from "@/app/ads/BannerH50";
 
 const WhyToUseItem = ({ ...props }) => {
     return (
@@ -231,8 +232,10 @@ export default function Home() {
                     </form>
                 </div>
 
+                <BannerH50 />
+
                 {/* Why use */}
-                <section className="mx-auto md:w-3/4 lg:w-full xl:w-3/4 my-28">
+                <section className="mx-auto md:w-3/4 lg:w-full xl:w-3/4">
                     <h2 className="text-center text-2xl font-bold">
                         Why you should use Fb Downloader <LinkHome showIcon />
                     </h2>
