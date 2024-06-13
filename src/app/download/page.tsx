@@ -1,3 +1,5 @@
+import BannerH50 from "@/app/ads/BannerH50";
+import NativeBanner from "@/app/ads/NativeBanner";
 import DownloadSkeleton from "@/app/download/DownloadSkeleton";
 import ShowError from "@/app/download/ShowError";
 import DownloadLinks from "@/app/download/download-links";
@@ -23,12 +25,14 @@ export default function DownloadPage(AppProps: AppProps) {
     return (
         <div className="container mx-auto">
             <Header />
-
+            <NativeBanner />
             <div>
+                <BannerH50 />
                 <React.Suspense fallback={<DownloadSkeleton />}>
                     <DownloadLinks url={facebookVideoUrl} />
                 </React.Suspense>
             </div>
+            <NativeBanner />
         </div>
     );
 }
