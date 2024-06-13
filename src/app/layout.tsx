@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "./daisyui.css";
 import { application } from "@/app/global-variable";
+import SocialBar from "@/app/ads/SocialBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +66,7 @@ export default function RootLayout({
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5383842302083788"
                     crossOrigin="anonymous"
                 ></script>
+                <SocialBar />
             </head>
             <body className={inter.className}>{children}</body>
             <script async src="/js/script.js"></script>

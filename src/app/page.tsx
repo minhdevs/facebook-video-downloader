@@ -7,6 +7,7 @@ import Header from "@/app/ui/Layouts/Header";
 import { application } from "@/app/global-variable";
 import Script from "next/script";
 import BannerH50 from "@/app/ads/BannerH50";
+import NativeBanner from "@/app/ads/NativeBanner";
 
 const WhyToUseItem = ({ ...props }) => {
     return (
@@ -316,6 +317,8 @@ export default function Home() {
                         />
                     </div>
                 </section>
+
+                <NativeBanner />
 
                 {/* How to use */}
                 <section className="mx-auto md:w-3/4 lg:w-full xl:w-3/4 my-28">
