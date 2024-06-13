@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BannerH50() {
     return (
-        <section className="my-28">
+        <section className="my-28 mx-auto w-fit">
             <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
